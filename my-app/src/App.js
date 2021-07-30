@@ -2,6 +2,8 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import ContentList from "./components/ContentList";
+import Section from './components/Section';
+
 require("dotenv").config();
 function App() {
   const [content, setContent] = useState();
@@ -20,6 +22,12 @@ function App() {
       <div className="content">
         <ContentList content={content} />
       </div>
+      <Section category={'business'} title={'BUSINESS'}/>
+      <Section category={'technology'} title={'TECHNOLOGY'}/>
+      <Section category={'health'} title={'HEALTH'}/>
+      <Section category={'sports'} title={'SPORTS'}/>
+      <Section category={'science'} title={'SCIENCE'}/>
+      <Section category={'entertainment'} title={'ENTERTAINMENT'}/>
     </div>
   );
 }
