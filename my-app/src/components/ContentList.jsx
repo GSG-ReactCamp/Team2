@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ContentList = ({ content }) => {
   return (
     <div className="cards_box">
@@ -14,9 +16,9 @@ const ContentList = ({ content }) => {
               <h4 className="content_title">{content.title} </h4>
               <p> {content.description.substring(0, 200)}... </p>
               {/* 
-             todo : add link instead of the anchor...
+             todo : pass the data of a specific news from <ContentList /> to <NewsContent />
              */}
-              <a href={content.url}>Read More </a>
+              <Link to="/NewsContent" >Read More </Link>
             </div>
           </div>
         ))}
