@@ -100,3 +100,22 @@ body {
 .card-body a:hover {
   background-color: #bb1919;
 }
+/* sections style >>Abdallah ....*/
+.sectionHeader{
+  margin-top: 10px;
+  border: none;
+  padding: 5px 0;
+  color:white;
+  width: 100%;
+  background-color: gray;
+}
+.sectionContainer{
+  display: flex;
+  justify-content: space-around;
+  background-color: gray;
+}
+.bigContainer{
+  margin-top: 20px;
+  padding-bottom: 40px;
+  background-color: gray;
+}
