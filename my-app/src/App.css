@@ -2,18 +2,43 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #EEF0F3;
 }
 .App {
   text-align: center;
 }
 .Header {
-  background-color: #bb1919;
   height: 10%;
   width: 100%;
-  padding: 1%;
-  color: white;
+  padding: 10px;
   margin-bottom: 2rem;
-  cursor: pointer;
+  display: flex;
+  display: flex;
+
+}
+.nav-title{
+  color: #4966D7;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: left;
+  padding-left: 50px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+
+}
+.nav-links {
+  width: 45%;
+  height: 40px;
+  
+}
+.nav-links a{
+  color: #1D1D1D;
+	text-decoration: none;
+  justify-content: space-between;
+padding: 10px;
+border: 1px solid #545d7a;
+margin-left: 90px;
+border-radius: 40px
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -33,7 +58,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 30%;
+  width: 23%;
 }
 .card-header img {
   width: 100%;
@@ -51,6 +76,7 @@ body {
 .content_date {
   font-size: 12px;
   color: #545d7a;
+  margin-top:-15%;
 }
 
 .tag {
@@ -88,8 +114,8 @@ body {
 }
 
 .card-body a {
-  border-color: #bb1919;
-  border: 1px solid #bb1919;
+  border-color: #5873DD;
+  border: 1px solid #5873DD;
   border-radius: 0;
   text-decoration: none;
   color: black;
@@ -98,23 +124,27 @@ body {
 }
 
 .card-body a:hover {
-  background-color: #bb1919;
+  background-color: #5873DD;
 }
-.sectionHeader{
+#BUSINESS, #TECHNOLOGY,#HEALTH,#SPORTS,#SCIENCE,#ENTERTAINMENT{
   margin-top: 10px;
   border: none;
-  padding: 5px 0;
+  padding: 8px 0;
   color:white;
   width: 100%;
-  background-color: gray;
+  background-color: #5873DD;
+
+  
 }
 .sectionContainer{
   display: flex;
-  justify-content: space-around;
-  background-color: gray;
+  justify-content: space-evenly;
+  background-color: #FFFFFF;
+  height: 360px;
 }
 .bigContainer{
   margin-top: 20px;
   padding-bottom: 40px;
-  background-color: gray;
+  background-color: #FFFFFF;
 }
+

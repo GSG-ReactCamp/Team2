@@ -1,6 +1,7 @@
 import React , {useState,useEffect} from 'react';
 import '../App.css';
 import {Link} from 'react-router-dom';
+import Card from './Card';
 import { BrowserRouter } from 'react-router-dom';
 
 function Section(props){
@@ -15,22 +16,11 @@ function Section(props){
   return (
     <BrowserRouter>
     <div className="bigContainer">
-        <h2 className="sectionHeader">{props.title}</h2>
+        <h2 id={props.title}>{props.title}</h2>
         <div className="sectionContainer">{news && news.slice(0, 3).map((news) => (
-            <div className="card" key={news.news}>
-            <div className="card-header">
-              <p>
-                <img className="content_img" src={news.urlToImage} alt="" />{" "}
-              </p>
-            </div>
-            <div className="card-body">
-              <span className="content_date"> {news.publishedAt} </span>
-              <h4 className="content_title">{news.title} </h4>
-              <p> {news.description}... </p>
-              <Link to={news.url}>Read More </Link>
-            </div>
-          </div>
-          ))}</div>
+           <Card content={news}/>
+          ))}
+      </div>
     </div>
     </BrowserRouter>
   )
