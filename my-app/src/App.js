@@ -11,9 +11,9 @@ require("dotenv").config();
 function App() {
   const [content, setContent] = useState();
   useEffect(() => {
-    // const apikey = process.env.REACT_APP_UNSPLASH_KEY;
+    const apikey = process.env.REACT_APP_UNSPLASH_KEY;
     fetch(
-      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=6e981d4adce646b6aeb2a2d500b56c6e`
+      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apikey}`
     )
       .then((data) => data.json())
       .then((res) => setContent(res.articles));
