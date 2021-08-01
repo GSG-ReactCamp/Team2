@@ -5,8 +5,8 @@ import Header from "./components/Header";
 import ContentList from "./components/ContentList";
 import NewsContent from "./components/NewsContent";
 import 'antd/dist/antd.css';
-
-
+import Section from './components/Section';
+import {categoriesData} from './Categories';
 
 require("dotenv").config();
 function App() {
@@ -19,7 +19,7 @@ function App() {
       .then((data) => data.json())
       .then((res) => setContent(res.articles));
   }, []);
-
+  
   return (
     <BrowserRouter>
       <div className="App">
@@ -33,6 +33,7 @@ function App() {
           <NewsContent content={content} />
         </Route>
       </div>
+      { categoriesData.map((cat) => <Section category={cat} title={cat.toUpperCase()}/>)}
     </BrowserRouter>
   );
 }
