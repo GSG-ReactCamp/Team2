@@ -15,10 +15,8 @@ const ContentList = ({ content }) => {
               <span className="content_date"> {content.publishedAt} </span>
               <h4 className="content_title">{content.title} </h4>
               <p> {content.description.substring(0, 200)}... </p>
-              {/* 
-             todo : pass the data of a specific news from <ContentList /> to <NewsContent />
-             */}
-              <Link to="/NewsContent" >Read More </Link>
+              
+              <Link to={`/NewsContent/${content.title}`} >Read More </Link>
             </div>
           </div>
         ))}
