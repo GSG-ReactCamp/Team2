@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import ContentList from "./components/ContentList";
 import NewsContent from "./components/NewsContent";
+import 'antd/dist/antd.css';
 
 
 
