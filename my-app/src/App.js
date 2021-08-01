@@ -28,7 +28,9 @@ function App() {
             <ContentList content={content} />
           </Route>
         </div>
-        <Route path="/newsContent" component={NewsContent} />
+        <Route path="/newsContent/:newsTitle">
+          <NewsContent content={content} />
+        </Route>
       </div>
     </BrowserRouter>
   );
