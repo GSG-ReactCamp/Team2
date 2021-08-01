@@ -16,8 +16,7 @@ function App() {
       .then((data) => data.json())
       .then((res) => setContent(res.articles));
   }, []);
-  // const categories = ['business','technology','health','sports','science','entertainment'];
-
+  
   return (
     <div className="App">
       <Header />
