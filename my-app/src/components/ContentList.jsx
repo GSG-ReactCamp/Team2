@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+import { Spin } from 'antd';
+
+
 const ContentList = ({ content }) => {
   return (
     <div className="cards_box">
-      {content &&
+      {content ?
         content.map((content) => (
           <div className="card" key={content.content}>
             <div className="card-header">
@@ -13,13 +17,13 @@ const ContentList = ({ content }) => {
               <span className="content_date"> {content.publishedAt} </span>
               <h4 className="content_title">{content.title} </h4>
               <p> {content.description.substring(0, 200)}... </p>
-              {/* 
-             todo : add link instead of the anchor...
-             */}
-              <a href={content.url}>Read More </a>
+              
+              <Link to={`/NewsContent/${content.title}`} >Read More </Link>
             </div>
           </div>
-        ))}
+        ))
+        : <Spin size="large"/>
+      }
     </div>
   );
 };

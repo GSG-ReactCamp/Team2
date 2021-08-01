@@ -100,6 +100,66 @@ body {
 .card-body a:hover {
   background-color: #bb1919;
 }
+
+.news-content {
+  margin-bottom: 100px;
+}
+
+.news-header {
+  display: flex;
+}
+
+.news-header h2 {
+  text-align: start;
+  width: 70%;
+  margin-left: 7%;
+  font-size: 36px;
+}
+
+.news-header span {
+  text-align: left;
+  margin: 50px;
+}
+
+.news-content p {
+  text-align: start;
+  margin-left: 7%;
+}
+
+.news-date {
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+.back-button {
+  text-decoration: none;
+  border: 1px solid #bb1919;
+  padding: 10px;
+  background-color: #bb1919;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+}
+
+.text-content {
+  margin: 50px;
+  margin-right: 100px;
+}
+
+.src-btn {
+  text-decoration: none;
+  padding: 10px;
+  margin: 50px;
+  border: 2px solid #bb1919;
+  color: #bb1919;
+  border-radius: 5px;
+}
+
+.src-btn:hover {
+  cursor: pointer;
+  background-color: #bb1919;
+  color: #fff;
+}
 .sectionHeader{
   margin-top: 10px;
   border: none;

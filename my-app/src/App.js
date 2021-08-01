@@ -1,7 +1,10 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import ContentList from "./components/ContentList";
+import NewsContent from "./components/NewsContent";
+import 'antd/dist/antd.css';
 import Section from './components/Section';
 import {categoriesData} from './Categories';
 
@@ -18,13 +21,20 @@ function App() {
   }, []);
   
   return (
-    <div className="App">
-      <Header />
-      <div className="content">
-        <ContentList content={content} />
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <div className="content">
+          <Route exact path="/">
+            <ContentList content={content} />
+          </Route>
+        </div>
+        <Route path="/newsContent/:newsTitle">
+          <NewsContent content={content} />
+        </Route>
       </div>
       { categoriesData.map((cat) => <Section category={cat} title={cat.toUpperCase()}/>)}
-    </div>
+    </BrowserRouter>
   );
 }
 
