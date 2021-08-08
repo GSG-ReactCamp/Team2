@@ -5,7 +5,7 @@ import { Spin } from 'antd';
 
 export default function NewsContent ({content}) {
     const {newsTitle} = useParams();
-    
+    console.log(content)
     const myNews = content.filter(content => content.title === newsTitle);
     console.log(myNews[0])
 

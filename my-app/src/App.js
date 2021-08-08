@@ -10,11 +10,11 @@ import {categoriesData} from './Categories';
 
 require("dotenv").config();
 function App() {
-  const [content, setContent] = useState();
+  const [content, setContent] = useState([]);
   useEffect(() => {
     const apikey = process.env.REACT_APP_UNSPLASH_KEY;
     fetch(
-      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${apikey}`
+      `https://newsapi.org/v2/top-headlines?sources=bbc-news&language=en&apiKey=${apikey}`
     )
       .then((data) => data.json())
       .then((res) => setContent(res.articles));
@@ -24,16 +24,20 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <div className="content">
-          <Route exact path="/">
-            <ContentList content={content} />
+        <switch>
+          <div className="content">
+            <Route exact path="/">
+              <ContentList content={content} />
+            </Route>
+          </div>
+          <Route path="/newsContent/:newsTitle">
+            <NewsContent content={content} />
           </Route>
-        </div>
-        <Route path="/newsContent/:newsTitle">
-          <NewsContent content={content} />
-        </Route>
+          <Route exact path="/">
+            { categoriesData.map((cat) => <Section category={cat} title={cat.toUpperCase()}/>)}
+          </Route>
+        </switch>
       </div>
-      { categoriesData.map((cat) => <Section category={cat} title={cat.toUpperCase()}/>)}
     </BrowserRouter>
   );
 }

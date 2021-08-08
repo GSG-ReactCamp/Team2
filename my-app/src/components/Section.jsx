@@ -8,10 +8,10 @@ function Section(props){
     useEffect(() => {
 
     const APIKEY = '5c14185759d842e78e5c87ec6dccb171';
-    fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&apiKey=${APIKEY}`)
+    fetch(`https://newsapi.org/v2/top-headlines?category=${props.category}&language=en&apiKey=${APIKEY}`)
       .then((data) => data.json())
       .then((res) => setNews(res.articles));
-  },[]);
+  },[props.category]);
   return (
     <BrowserRouter>
     <div className="bigContainer">

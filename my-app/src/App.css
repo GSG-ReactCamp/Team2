@@ -121,6 +121,11 @@ body {
   margin: 50px;
 }
 
+.news-img img {
+  max-width: 700px;
+  height: auto;
+}
+
 .news-content p {
   text-align: start;
   margin-left: 7%;
